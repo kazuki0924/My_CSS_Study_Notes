@@ -1,0 +1,48 @@
+<!-- CSS grid -->
+
+<!-- In CSS Grid, the parent element is referred to as the container and its children are called items -->
+
+<style>
+  .d1{background:rgb(4, 7, 8);}
+  .d2{background:LightSalmon;}
+  .d3{background:PaleTurquoise;}
+  .d4{background:LightPink;}
+  .d5{background:PaleGreen;}
+  
+  .container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+/* Turn any HTML element into a grid container by setting its display property to grid */
+    display: grid;
+/* Adding columns with grid-template-columns */
+/* The number of parameters given to the grid-template-columns property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column */
+/* You can use absolute and relative units like px and em in CSS Grid to define the size of rows and columns */
+
+/* You can use these as well:
+
+fr: sets the column or row to a fraction of the available space,
+
+auto: sets the column or row to the width or height of its content automatically,
+
+%: adjusts the column or row to the percent width of its container. */
+
+    grid-template-columns: 1fr 100px 2fr;
+/* Adding Rows with grid-template-rows */
+    grid-template-rows: 50px 50px;
+/* Creating a column gap using grid-column-gap */
+    grid-column-gap: 20px;
+/* Creating a row gap using grid-row-gap */
+    grid-row-gap: 5px;
+/* If grid-gap has one value, it will create a gap between all rows and columns. However, if there are two values, it will use the first one to set the gap between the rows and the second value for the columns. */
+    grid-gap: 10px 20px;
+  }
+</style>
+  
+<div class="container">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
